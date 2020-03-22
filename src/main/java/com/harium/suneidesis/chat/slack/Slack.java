@@ -10,6 +10,7 @@ import com.harium.suneidesis.instance.Instance;
 import com.harium.suneidesis.knowledge.linguistic.core.box.Chatbox;
 import com.harium.suneidesis.output.Output;
 
+import com.harium.suneidesis.output.OutputContext;
 import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
@@ -66,7 +67,7 @@ public class Slack implements Chatbox {
         }
 
         @Override
-        public void print(String sentence) {
+        public void print(String sentence, OutputContext context) {
             session.sendMessage(channel, sentence);
         }
 

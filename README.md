@@ -6,19 +6,19 @@ Plugin to turn your Suneidesis Chatbot into a Slack Bot
 <dependency>
     <groupId>com.harium.suneidesis.sunbot</groupId>
     <artifactId>slack</artifactId>
-    <version>1.0.1</version>
+    <version>1.0.2</version>
 </dependency>
 ```
 
 ## How to use it
 
 ```
-LanguageBox box = new MyLanguageBox();
-Instance bot = new Instance("Precious Bot");
-bot.setLanguageBox(box);
+    LanguageBox box = new EchoBox(); // Use your own box
+    Instance bot = new Instance("Precious Bot");
+    bot.setLanguageBox(box);
 
-String token = "MY_TOKEN;
+    String token = "MY_TOKEN";
 
-Slack discord = new Slack(token);
-slack.addInstance(bot);
+    Slack slack = new Slack(token);
+    slack.addInstance(bot);
 ```
