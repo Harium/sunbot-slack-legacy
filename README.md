@@ -1,14 +1,7 @@
 # sunbot-slack
 Plugin to turn your Suneidesis Chatbot into a Slack Bot
 
-## Maven
-```xml
-<dependency>
-    <groupId>com.harium.suneidesis.sunbot</groupId>
-    <artifactId>slack</artifactId>
-    <version>1.1.0</version>
-</dependency>
-```
+[![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.harium.suneidesis.sunbot/slack/badge.svg)](https://maven-badges.herokuapp.com/maven-central/com.harium.suneidesis.sunbot/slack/)
 
 ## How to use it
 
