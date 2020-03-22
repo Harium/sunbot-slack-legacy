@@ -6,12 +6,9 @@ Plugin to turn your Suneidesis Chatbot into a Slack Bot
 ## How to use it
 
 ```
-    LanguageBox box = new EchoBox(); // Use your own box
-    Instance bot = new Instance("Precious Bot");
-    bot.setLanguageBox(box);
-
+    ChatBox bot = new EchoBox(); // Use your own box
+    
     String token = "MY_TOKEN";
-
     Slack slack = new Slack(token);
-    slack.addInstance(bot);
+    slack.addBox(bot);
 ```
