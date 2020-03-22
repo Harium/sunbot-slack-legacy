@@ -6,7 +6,7 @@ Plugin to turn your Suneidesis Chatbot into a Slack Bot
 <dependency>
     <groupId>com.harium.suneidesis.sunbot</groupId>
     <artifactId>slack</artifactId>
-    <version>1.0.2</version>
+    <version>1.1.0</version>
 </dependency>
 ```
 
