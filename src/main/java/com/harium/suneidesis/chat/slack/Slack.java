@@ -6,12 +6,11 @@ import com.harium.chatbot.slack.SlackUser;
 import com.harium.chatbot.slack.events.SlackMessagePosted;
 import com.harium.chatbot.slack.impl.SlackSessionFactory;
 import com.harium.chatbot.slack.listeners.SlackMessagePostedListener;
-import com.harium.suneidesis.instance.Instance;
-import com.harium.suneidesis.knowledge.linguistic.core.box.Chatbox;
-import com.harium.suneidesis.output.Output;
 
-import com.harium.suneidesis.output.OutputContext;
-import java.io.File;
+import com.harium.suneidesis.chat.box.Chatbox;
+import com.harium.suneidesis.chat.instance.Instance;
+import com.harium.suneidesis.chat.output.Output;
+import com.harium.suneidesis.chat.output.OutputContext;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;

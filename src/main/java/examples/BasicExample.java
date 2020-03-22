@@ -1,9 +1,9 @@
 package examples;
 
+import com.harium.suneidesis.chat.box.EchoBox;
+import com.harium.suneidesis.chat.box.LanguageBox;
+import com.harium.suneidesis.chat.instance.Instance;
 import com.harium.suneidesis.chat.slack.Slack;
-import com.harium.suneidesis.instance.Instance;
-import com.harium.suneidesis.knowledge.linguistic.core.box.EchoBox;
-import com.harium.suneidesis.knowledge.linguistic.core.box.LanguageBox;
 import java.io.IOException;
 
 public class BasicExample {
