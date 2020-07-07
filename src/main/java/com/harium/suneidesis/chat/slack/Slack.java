@@ -17,6 +17,9 @@ import java.nio.file.Paths;
 
 public class Slack implements BoxHandler {
 
+  public static final String PARAM_FILE = "slack_file";
+  public static final String PARAM_ATTACHMENTS = "slack_attachments";
+
   private SlackSession session;
 
   public Slack(String token) throws IOException {
@@ -67,6 +70,9 @@ public class Slack implements BoxHandler {
       context.getProperties().put(InputContext.USER_NAME, event.getSender().getRealName());
       context.getProperties().put(InputContext.CHANNEL_ID, event.getChannel().getId());
       context.getProperties().put(InputContext.CHANNEL_NAME, event.getChannel().getName());
+
+      context.getProperties().put(PARAM_FILE, event.getSlackFile());
+      context.getProperties().put(PARAM_ATTACHMENTS, event.getSlackFile());
 
       return context;
     }
