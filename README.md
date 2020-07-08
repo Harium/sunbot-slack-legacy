@@ -16,4 +16,5 @@ Create a classic Bot App using the link: https://api.slack.com/apps?new_classic_
     String token = "MY_TOKEN";
     Slack slack = new Slack(token);
     slack.addBox(bot);
+    slack.connect();
 ```
