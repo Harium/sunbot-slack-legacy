@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.harium.suneidesis.sunbot</groupId>
     <artifactId>slack</artifactId>
-    <version>1.2.3</version>
+    <version>1.2.4</version>
     <packaging>jar</packaging>
     <name>Sunbot Slack</name>
     <description>A plugin to turn your Suneidesis Chatbot into a Slack Bot</description>
@@ -30,7 +30,7 @@
         <dependency>
             <groupId>com.harium.suneidesis</groupId>
             <artifactId>core</artifactId>
-            <version>1.3.1</version>
+            <version>1.3.3</version>
         </dependency>
         <dependency>
             <groupId>junit</groupId>
