@@ -5,7 +5,6 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
-import java.io.IOException;
 import java.util.List;
 
 public class SlackTest {
@@ -26,6 +25,15 @@ public class SlackTest {
         SlackFile first = files.get(0);
         Assert.assertEquals("example.csv", first.getName());
         Assert.assertEquals("csv", first.getFiletype());
+    }
+
+    @Test
+    public void testParseFiles_Null() {
+        String jsonSource = "{\"type\":\"message\",\"text\":\"File Description\"}";
+
+        List<SlackFile> files = slack.parseFiles(jsonSource);
+
+        Assert.assertEquals(0, files.size());
     }
 
 }

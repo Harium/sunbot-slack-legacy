@@ -22,6 +22,7 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class Slack implements BoxHandler {
@@ -90,13 +91,16 @@ public class Slack implements BoxHandler {
         JsonObject node = gson.fromJson(jsonSource, JsonObject.class);
         JsonArray files = node.getAsJsonArray("files");
 
-        List<SlackFile> result = new ArrayList<>();
-        for (JsonElement element : files) {
-            JsonObject elementNode = element.getAsJsonObject();
-            result.add(FileMapper.mapFrom(elementNode));
+        if (files != null) {
+            List<SlackFile> result = new ArrayList<>();
+            for (JsonElement element : files) {
+                JsonObject elementNode = element.getAsJsonObject();
+                result.add(FileMapper.mapFrom(elementNode));
+            }
+            return result;
         }
 
-        return result;
+        return Collections.emptyList();
     }
 
     private class SlackOutput implements Output {
