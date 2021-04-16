@@ -11,8 +11,8 @@ import com.harium.chatbot.slack.SlackUser;
 import com.harium.chatbot.slack.events.SlackMessagePosted;
 import com.harium.chatbot.slack.impl.SlackSessionFactory;
 import com.harium.chatbot.slack.listeners.SlackMessagePostedListener;
+import com.harium.suneidesis.chat.Parser;
 import com.harium.suneidesis.chat.box.BoxHandler;
-import com.harium.suneidesis.chat.box.ChatBox;
 import com.harium.suneidesis.chat.input.InputContext;
 import com.harium.suneidesis.chat.output.Output;
 import com.harium.suneidesis.chat.output.OutputContext;
@@ -39,21 +39,23 @@ public class Slack implements BoxHandler {
         session.connect();
     }
 
-    @Override public void addBox(ChatBox instance) {
-        session.addMessagePostedListener(new MessageListener(instance));
+    @Override
+    public void addParser(Parser parser) {
+        session.addMessagePostedListener(new MessageListener(parser));
     }
 
-    @Override public void sendMessage(String channel, String message) {
+    @Override
+    public void sendMessage(String channel, String message) {
         SlackChannel c = new SlackChannel(channel);
         session.sendMessage(c, message);
     }
 
     private class MessageListener implements SlackMessagePostedListener {
 
-        ChatBox instance;
+        Parser parser;
 
-        public MessageListener(ChatBox instance) {
-            this.instance = instance;
+        public MessageListener(Parser parser) {
+            this.parser = parser;
         }
 
         @Override public void onEvent(SlackMessagePosted event, SlackSession session) {
@@ -68,7 +70,7 @@ public class Slack implements BoxHandler {
             com.harium.chatbot.slack.SlackChannel channel = event.getChannel();
 
             InputContext context = buildContext(event, message);
-            instance.input(context, new SlackOutput(channel));
+            parser.parse(context, new SlackOutput(channel));
         }
 
         private InputContext buildContext(SlackMessagePosted event, String message) {

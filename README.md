@@ -11,10 +11,10 @@ Create a classic Bot App using the link: https://api.slack.com/apps?new_classic_
 ## How to use it
 
 ```
-    ChatBox bot = new EchoBox(); // Use your own box
-    
+    Parser bot = new EchoBox(); // Use your own parser
+
     String token = "MY_TOKEN";
     Slack slack = new Slack(token);
-    slack.addBox(bot);
     slack.connect();
+    slack.addParser(bot);
 ```
