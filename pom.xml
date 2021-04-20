@@ -7,8 +7,8 @@
     <artifactId>slack</artifactId>
     <version>1.4.0</version>
     <packaging>jar</packaging>
-    <name>Sunbot Slack</name>
-    <description>A plugin to turn your Suneidesis Chatbot into a Slack Bot</description>
+    <name>Sunbot Slack Legacy</name>
+    <description>A plugin to turn your Suneidesis Chatbot into a Slack (Legacy) Bot</description>
     <url>http://github.com/harium/sunbot-slack</url>
     <scm>
         <connection>scm:git:git://github.com/harium/sunbot-slack.git</connection>

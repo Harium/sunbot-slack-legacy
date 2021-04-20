@@ -1,12 +1,21 @@
-# sunbot-slack
-Plugin to turn your Suneidesis Chatbot into a Slack Bot
-
-[![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.harium.suneidesis.sunbot/slack/badge.svg)](https://maven-badges.herokuapp.com/maven-central/com.harium.suneidesis.sunbot/slack/)
+# sunbot-slack (legacy)
+Plugin to turn your Suneidesis Chatbot into a Slack (Legacy) Bot 
 
 ## Disclaimer
 This library only works with classic Apps in Slack.
 
-Create a classic Bot App using the link: https://api.slack.com/apps?new_classic_app=1
+Legacy apps are deprecated and is not possible to create tokens anymore.
+
+Use the new library instead: https://github.com/Harium/sunbot-slack
+
+If you have a token, you can still use this library:
+```
+<dependency>
+    <groupId>com.harium.suneidesis.sunbot</groupId>
+    <artifactId>slack</artifactId>
+    <version>1.4.0</version>
+</dependency>
+```
 
 ## How to use it
 
